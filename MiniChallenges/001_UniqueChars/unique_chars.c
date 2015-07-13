@@ -11,10 +11,11 @@ int print_bools(int seenBeforeLen, bool* seenBefore);
 
 int main()
 {
-    char sampleInput[] = "abcaone";
+    char sampleInput[] = "abcone";
     
     bool result = hasDuplicateChars(sampleInput);
 
+    printf("%i = result \n", result);
 
 }
 
@@ -27,20 +28,15 @@ bool hasDuplicateChars(char * sampleInput)
     int seenBeforeLen = 300;
     seenBefore = (bool*)  calloc(seenBeforeLen, sizeof(bool)  );
 
-    printf("%i = len \n", len);
     for(int i = 0; i < len -1 ; i++){
         int charValue  = (int)  sampleInput[i] - 97;
-        printf("%c \n", sampleInput[i]);
-        printf("%i \n", charValue);
 
         if(seenBefore[charValue] == true){
-            printf("SEEN BEFORE!\n\n");
             return true; 
         }
-        seenBefore[i] = true;
+        seenBefore[charValue] = true;
     }
 
-    print_bools(seenBeforeLen, seenBefore);
 
 
     return false;
