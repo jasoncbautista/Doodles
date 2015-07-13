@@ -13,6 +13,7 @@ int main(){
     bool *seenBefore;
     int seenBeforeLen = 10;
     seenBefore = (bool*)  calloc(seenBeforeLen, sizeof(bool)  );
+    seenBeforeLen[2] = 1;
     
 
     printf("%i = len \n", len);
