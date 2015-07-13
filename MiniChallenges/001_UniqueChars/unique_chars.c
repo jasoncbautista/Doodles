@@ -13,8 +13,7 @@ int main(){
     bool *seenBefore;
     int seenBeforeLen = 10;
     seenBefore = (bool*)  calloc(seenBeforeLen, sizeof(bool)  );
-    seenBeforeLen[2] = 1;
-    
+    seenBefore[2] = 1;
 
     printf("%i = len \n", len);
     for(int i = 0; i < len -1 ; i++){
@@ -27,7 +26,6 @@ int main(){
     print_bools(seenBeforeLen, seenBefore);
 
 }
-
 
 int print_bools(int seenBeforeLen, bool* seenBefore){
     for(int j = 0; j < seenBeforeLen ; j++){
