@@ -14,6 +14,7 @@ int main(){
     int seenBeforeLen = 4;
     seenBefore = (bool*)  calloc(seenBeforeLen, sizeof(bool)  );
     
+    seenBefore[2] = true;
 
 
     printf("%i = len \n", len);
@@ -27,6 +28,9 @@ int main(){
 
 
     for(int j = 0; j < seenBeforeLen ; j++){
+        if(seenBefore[j] == true){
+            printf("YES!\n");
+        }
         printf("%i\n", seenBefore[j]);
     }
 
